@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>index</title>
+	<link rel="stylesheet" href="css/index.css ">
+	<script src="js/jquery-3.1.1.js "></script>
+	<script src="js/index.js "></script>
+</head>
+
+<body>
+	<div id="wrap" class="">
+		<img src="img/beginbtn.png" alt="" class="begin-btn">
+		<img src="img/hand.png" alt="" class="hand">
+		<ul class="bottom-btn">
+			<li id="0"></li>
+			<li id="1"></li>
+			<li id="2"></li>
+			<li id="3"></li>
+		</ul>
+
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<ul class="box1">
+				<li><img src="img/bang.png" alt=""></li>
+				<li> <span>1</span><span>聪明的小熊</span><span>800</span> </li>
+				<li> <span>2</span><span>聪明的小熊</span><span>700</span> </li>
+				<li> <span>3</span><span>聪明的小熊</span><span>600</span> </li>
+				<li> <span>4</span><span>聪明的小熊</span><span>500</span> </li>
+				<li> <span>5</span><span>聪明的小熊</span><span>500</span> </li>
+			</ul>
+		</div>
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<div class="box2">
+				<h2>活动规则</h2>
+				<p>1、每人有多次游戏机会，但成绩只能提交一次，且提交之后不能更改！</p>
+				<p>2、提交成绩时要提供姓名及手机号码作为兑奖凭证，因用户本人未在规定时间内提供正确的手机号码造成的奖品损失，由用户个人承担。</p>
+				<p>3、活动时间为2016年5月11日-5月19日24:00，活动结束后将在“雾灵山庄”微信公布中奖名单。</p>
+				<p>4、获奖规则：系统将根据大家提交的成绩，按照由多到少的规则进行排行，排名第1的网友将获得一等奖，排名第2-第21位的网友将分获二等奖，以此类推。</p>
+				<p>5、奖品的发放：活动结束后，将由工作人员与您取得联系，并将相应的卡券编号发送到您提供的手机号码上。</p>
+			</div>
+		</div>
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<div class="box3">
+				<h2>活动奖品</h2>
+				<p>一等奖1人：价值1488元7号楼1晚豪华标间免费房券1张，并可享康体项目3折优惠；</p>
+				<p>二等奖20人：100元订房代金券每人1张，并可享康体项目4折优惠；</p>
+				<p>三等奖50人：50元订房代金券每人1张，并可享康体项目5折优惠。</p>
+				<p>奖品的有效期：2016年5月20日至6月15日</p>
+				<p>（周五、周六及法定节假日不可用）</p>
+			</div>
+		</div>
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<div class="box2">
+				<h2>奖券使用说明</h2>
+				<p>1、奖品的使用：请务必至少提前一周致电010-81027788或81027799进行预约，并于入住时向前台服务人员出示您手机上收到的卡券编号即可使用（需同时验证获奖人姓名与手机号码）。</p>
+				<p>2、代金券仅适用于线下门市价入住客房消费使用，不适用于通过携程或微信等其他线上渠道预定使用。</p>
+				<p>3、免费房安排的房间将视当时酒店排房情况而定，如您所预约的时段预订已满，将与您协商调整入住时间。</p>
+				<p>4、免费房券及代金券不得用于除订房外其他产品消费，不得与酒店其他优惠折扣或礼券同时使用，且不予退换、兑换现金或找赎。</p>
+				<p>5、对于恶意刷奖者和作弊者，主办方有权取消其兑奖资格。</p>
+			</div>
+		</div>
+		<div id="startBox" class="li-btn hide">
+			<img src="img/close.png" alt="" class="close">
+			<div class="startBox">
+				<img src="img/userMsg.png" alt="" class="sb-title">
+				<p>个人信息将作为领奖依据</p>
+				<p>请认真填写喔</p>
+				<form>
+					<input type="text" placeholder="姓名" class="username"><br>
+					<input type="text" placeholder="电话" class="phone"><br>
+					<input type="button" value="提交并开始游戏" class="startbtn">
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 游戏开始玩的界面 -->
+	<div id="running" class="hide">
+		<div class="running-text">
+			<img src="img/rtext1.png" alt="">
+			<img src="img/rtext2.png" alt="" class="hide">
+			<img src="img/rtext3.png" alt="" class="hide">
+		</div>
+		<ul class="score-time">
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>60</li>
+		</ul>
+		<div class="money">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+			<img src="img/money.png" alt="">
+		</div>
+		<img src="img/rhand.png" alt="" class="running-hand">
+		<img src="img/bottom.png" alt="" class="bottom">
+	</div>
+	<!-- 结果界面 -->
+	<div id="result" class="hide">
+		
+		<p class="resilt-money">￥24</p>
+		<p>你太客气了，这不是你的挑战极限吧</p>
+		<p>我的辉煌战绩：￥<span class="max-money">333</span> 当前排名<span class="rank">66</span>位</p>
+		<div class="result-btns">
+			<img src="img/again.png" alt="" class="again"><img src="img/share.png" alt="" class="share-btn">
+		</div>
+		<ul class="bottom-btn">
+			<li id="4"></li>
+			<li id="5"></li>
+			<li id="6"></li>
+			<li id="7"></li>
+		</ul>
+
+
+
+
+
+
+
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<ul class="box1">
+				<li><img src="img/bang.png" alt=""></li>
+				<li> <span>1</span><span>聪明的小熊</span><span>800</span> </li>
+				<li> <span>2</span><span>聪明的小熊</span><span>700</span> </li>
+				<li> <span>3</span><span>聪明的小熊</span><span>600</span> </li>
+				<li> <span>4</span><span>聪明的小熊</span><span>500</span> </li>
+				<li> <span>5</span><span>聪明的小熊</span><span>500</span> </li>
+			</ul>
+		</div>
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<div class="box2">
+				<h2>活动规则</h2>
+				<p>1、每人有多次游戏机会，但成绩只能提交一次，且提交之后不能更改！</p>
+				<p>2、提交成绩时要提供姓名及手机号码作为兑奖凭证，因用户本人未在规定时间内提供正确的手机号码造成的奖品损失，由用户个人承担。</p>
+				<p>3、活动时间为2016年5月11日-5月19日24:00，活动结束后将在“雾灵山庄”微信公布中奖名单。</p>
+				<p>4、获奖规则：系统将根据大家提交的成绩，按照由多到少的规则进行排行，排名第1的网友将获得一等奖，排名第2-第21位的网友将分获二等奖，以此类推。</p>
+				<p>5、奖品的发放：活动结束后，将由工作人员与您取得联系，并将相应的卡券编号发送到您提供的手机号码上。</p>
+			</div>
+		</div>
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<div class="box3">
+				<h2>活动奖品</h2>
+				<p>一等奖1人：价值1488元7号楼1晚豪华标间免费房券1张，并可享康体项目3折优惠；</p>
+				<p>二等奖20人：100元订房代金券每人1张，并可享康体项目4折优惠；</p>
+				<p>三等奖50人：50元订房代金券每人1张，并可享康体项目5折优惠。</p>
+				<p>奖品的有效期：2016年5月20日至6月15日</p>
+				<p>（周五、周六及法定节假日不可用）</p>
+			</div>
+		</div>
+		<div class="li-btn bottom-box hide">
+			<img src="img/close.png" alt="" class="close">
+			<div class="box2">
+				<h2>奖券使用说明</h2>
+				<p>1、奖品的使用：请务必至少提前一周致电010-81027788或81027799进行预约，并于入住时向前台服务人员出示您手机上收到的卡券编号即可使用（需同时验证获奖人姓名与手机号码）。</p>
+				<p>2、代金券仅适用于线下门市价入住客房消费使用，不适用于通过携程或微信等其他线上渠道预定使用。</p>
+				<p>3、免费房安排的房间将视当时酒店排房情况而定，如您所预约的时段预订已满，将与您协商调整入住时间。</p>
+				<p>4、免费房券及代金券不得用于除订房外其他产品消费，不得与酒店其他优惠折扣或礼券同时使用，且不予退换、兑换现金或找赎。</p>
+				<p>5、对于恶意刷奖者和作弊者，主办方有权取消其兑奖资格。</p>
+			</div>
+		</div>
+
+		<div class="share li-btn hide">
+			<img src="img/sharetext.png" alt="">
+		</div>
+	</div>
+</body>
+
+</html>
