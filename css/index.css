@@ -3,17 +3,62 @@
   margin: 0;
 }
 html,body{
-	/*width: 414px;*/
+	width: 100%;
   	/*height: 736px;*/
-  	height:11.5rem;
+  	overflow: hidden;
+  	height:100%;
 }
 #wrap{
 	position: relative;
-  	width: 6.46rem;
-  	height:11.5rem;
+  	width: 100%;
+  	height:100%;
   	background: url(../img/page1.png) no-repeat;
-  	background-size: 6.46rem 11.5rem;
+  	background-size: 100% 100%;
 
+}
+.pt1{
+	position: absolute;
+	top: 1.0rem;
+	width: 6.14rem;
+	animation: pt1Move .8s 1 .3s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+@keyframes pt1Move{
+	0%{
+		opacity: 0;
+		transform: scale(0);
+	}
+	/*50%{
+		transform: scale(0.9);
+	}*/
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.pt2{
+	position: absolute;
+	top: 2.66rem;
+	width: 6.21rem;
+	animation: pt2Move .8s 1;
+}
+@keyframes pt2Move{
+	0%{
+		transform: rotateY(0deg);
+	}
+	25%{
+		transform: rotateY(-30deg);
+	}
+	50%{
+		transform: rotateY(0deg);
+	}
+	75%{
+		transform: rotateY(30deg);
+	}
+	100%{
+		transform: rotateY(0deg);
+	}
 }
 .begin-btn{
 	position: absolute;
@@ -92,7 +137,7 @@ html,body{
 	top:0;
 	width: 6.4rem;
 	height: 11.5rem;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.7);
 	font-size: 0.3rem;
 }
 .li-btn>img{
@@ -107,6 +152,9 @@ html,body{
 	background: #FCE6C8;
 	border:1px solid #DD0029;
 	border-radius: 0.15rem;
+}
+.box1 li span{
+	padding-top:5px; 
 }
 .box1 li{
 	list-style: none;
@@ -174,6 +222,7 @@ html,body{
 	border:2px solid #DD1536;
 	border-radius: 0.15rem;
 	background: #F0AE00;
+	outline: none;
 }
 .startBox .startbtn{
 	display: inline-block;
@@ -184,6 +233,7 @@ html,body{
 	border-radius: 0.15rem;
 	color: #fff;
 	font-size: 0.31rem;
+	outline: none;
 }
 
 
@@ -192,10 +242,10 @@ html,body{
 #running{
 	position: relative;
 	overflow: hidden;
-  	width: 6.46rem;
-  	height: 11.5rem;
+  	width: 100%;
+  	height: 100%;
   	background: url(../img/runningBg.png) no-repeat;
-  	background-size: 6.46rem 11.5rem;
+  	background-size: 100% 100%;
 }
 .running-text{
 	position: relative;
@@ -227,15 +277,24 @@ html,body{
 	color: #A87C4E;
 }
 .money{
+	position: relative;
 	margin: 1.09rem 0 0;
 	transform-style: preserve-3d;
 	 -webkit-transform-style: preserve-3d;
 }
-.money img{
+.money>img{
+	position: absolute;
+	z-index: 50000;
+	left:0.97rem;
+	width: 4.52rem;
+}
+.money div{
 	position: absolute;
 	z-index: 100000;
 	left:0.97rem;
 	width: 4.52rem;
+	height: 11rem;
+	background: rgba(44,44,44,0);
 }
 .running-hand{
 	position: absolute;
@@ -248,11 +307,13 @@ html,body{
 @keyframes runHandMove{
 	from{
 		opacity: 1;
+		display: inline-block;
 		transform: translateY(0rem);
 	}
 	to{
 		opacity: 0;
 		transform: translateY(-1.5rem);
+		display: none;
 	}
 }
 .bottom{
@@ -262,32 +323,29 @@ html,body{
 	width: 6.46rem;
 }
 .anim{
-	animation:move .4s infinite;
-	-webkit-animation:move 2s infinite;
+	animation:move 1s infinite;
+	-webkit-animation:move 1.3s infinite;
 	animation-iteration-count:1;
+	animation-fill-mode: forwards;
 }
 @-webkit-keyframes move{
 	0%{
 		transform: translateY(0px) scale(1);
 		opacity: 1;
 	}
-	50%{
-		transform: translateY(-7.81rem) scale(0.3);
-		opacity: 0.6;
-	}
 	100%{
 		transform: translateY(-7.81rem) scale(0.1);
-		opacity: 0.2;
+		opacity: 0;
 	}
 }
 /*结果页面*/
 #result{
 	overflow: hidden;
 	position: relative;
-  	width: 6.46rem;
-  	height: 11.5rem;
+  	width: 100%;
+  	height: 100%;
   	background: url(../img/page3.png) no-repeat;
-  	background-size: 6.46rem 11.5rem;
+  	background-size: 100% 100%;
 
 }
 #result .bottom-btn{
@@ -309,7 +367,7 @@ html,body{
 #result>p:nth-child(3){
 	margin: 0 auto;
 	padding: 0.15rem 0.46rem; 
-	width: 4.52rem;
+	width: 4.72rem;
 	background: #fff;
 	color:#C8001D;
 	border-radius: 0.15rem;
@@ -330,4 +388,9 @@ html,body{
 	top: 0.78rem;
 	left: 2.58rem;
 	width: 3.59rem;
+}
+
+.rank-name{ 
+	padding:0 0 5px 30px;
+	background: url(../img/user.png) no-repeat;
 }
